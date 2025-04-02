@@ -20,7 +20,7 @@
             <tr>
                 <td>{{$servico->id}}</td>
                 <td>{{$servico->nome}}</td>
-                <td>aaa</td>
+                <td><a href="{{ route('servicos.edit', $servico)}}" class="btn btn-primary">Atualizar</a></td>
             </tr>
         @empty
             <tr>
