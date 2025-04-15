@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-@include('_mensagens')
+@include('_mensagens_sessao')
 <form action="{{ route('usuarios.store') }}" method="post">
     @include('usuarios._form')
 </form>

@@ -13,9 +13,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('usuarios', UsuarioController::class);
 
-// rotas para trabalhar com serviõs
+// rotas para trabalhar com serviços
 Route::get('/servicos', [ServicoController::class, 'index'])->name('servico.index');
 Route::get('servicos/create', [ServicoController::class, 'create'])->name('servicos.create');
 Route::post('/servicos', [ServicoController::class, 'store'])->name('servicos.store');
-Route::get('/servicos/{id}/edit', [ServicoController::class, 'edit'])->name('servicos.edit');
+Route::get('/servicos/{servico}/edit', [ServicoController::class, 'edit'])->name('servicos.edit');
 Route::put('/servicos/{servico}', [ServicoController::class, 'update'])->name('servicos.update');

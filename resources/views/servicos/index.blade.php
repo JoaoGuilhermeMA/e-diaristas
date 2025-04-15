@@ -7,6 +7,8 @@
 @stop
 
 @section('content')
+@include('_mensagens_sessao')
+
 <table class="table">
     <thead>
         <tr>

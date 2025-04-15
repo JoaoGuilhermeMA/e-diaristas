@@ -50,18 +50,16 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $usuario)
     {
-        $usuario = User::findOrFail($id);
         return view('usuarios.edit', ['usuario' => $usuario]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UsuarioRequest $request, string $id)
+    public function update(UsuarioRequest $request, User $usuario)
     {
-        $usuario = User::findOrFail($id);
         $usuario->update([
             'name' => $request['name'],
             'email' => $request['email'],
@@ -73,9 +71,8 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(User $usuario)
     {
-        $usuario = User::findOrFail($id);
         $usuario->delete();
         return redirect()->route('usuarios.index')->with('mensagem', 'Usuário apagado com sucesso!');
     }
