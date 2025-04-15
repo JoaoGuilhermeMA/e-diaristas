@@ -318,6 +318,22 @@ return [
                 ],
             ],
         ],
+        [
+            'text' => 'Cadastros de Usuarios',
+            'icon' => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'lista de usuarios',
+                    'route' => 'usuarios.index',
+                    'icon' => 'fas fa-fw fa-list'
+                ],
+                [
+                    'text' => 'Novo usuario',
+                    'route' => 'usuarios.create',
+                    'icon' => 'fas fa-fw fa-file',
+                ],
+            ],
+        ],
     ],
 
     /*
