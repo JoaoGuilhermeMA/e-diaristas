@@ -27,7 +27,7 @@
                     <div class="form-group">
                         <label for="posicao">Posição na plataforma</label>
                         <input value="{{ old('posicao', $servico->posicao ?? '')  }}" type="input" required
-                            class="form-control" name="posicao" id="posicao" data-mask="00"
+                            class="form-control" name="posicao" data-mask="00" id="posicao" data-mask="00"
                             placeholder="Posição do serviço na plataforma">
                     </div>
                 </div>
